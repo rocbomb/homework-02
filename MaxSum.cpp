@@ -21,12 +21,6 @@ int maxNum1(int m,int n){
 	for(int i=1;i<=m;i++)
 		for(int j=1;j<=n;j++)
 			pre[i][j]=pre[i-1][j]+pre[i][j-1]-pre[i-1][j-1]+matrix[i][j];
-	printf("\n");
-	for(int i=0;i<=m;i++){
-		for(int j=0;j<=n;j++)
-			std::cout<<pre[i][j]<<" ";
-		printf("\n");
-	}
 
 	for(int i=1; i<=m; i++)
 		for(int j=1;j<=n;j++)
@@ -45,13 +39,6 @@ int maxNum2(int m,int n){
 	for(int i=1;i<=m;i++)
 		for(int j=1;j<=n;j++)
 			pre[i][j] = pre[i][j-1] + matrix[i][j];
-		printf("\n");
-
-	for(int i=0;i<=m;i++){
-		for(int j=0;j<=n;j++)
-			std::cout<<pre[i][j]<<" ";
-		printf("\n");
-	}
 
 	for(int i=1; i<=n; i++)
 		for(int j=i;j<=n;j++){
@@ -63,9 +50,6 @@ int maxNum2(int m,int n){
 				if(columnsMax < sum)
 					columnsMax = sum;
 			}
-//			if(columnsMax > max)
-//				max = columnsMax;
-//			columnsMax = 0;
 			sum = 0;
 		}
 
@@ -90,9 +74,6 @@ int maxNum4(int m, int n){
 				if(columnsMax < sum)
 					columnsMax = sum;
 			}
-//			if(columnsMax > max)
-//				max = columnsMax;
-//			columnsMax = 0;
 			sum = 0;
 		}
 
